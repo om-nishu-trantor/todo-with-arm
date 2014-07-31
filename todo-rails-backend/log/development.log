@@ -1,0 +1,2 @@
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2693ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=todo_development command={:count=>"users", :query=>{}} runtime: 13.9780ms
