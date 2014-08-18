@@ -11,8 +11,7 @@ class User
   validates :password, :presence => true, :allow_blank => false
 
   def self.authenticate(*args)
-    args = args.first
-    user = User.where(email: args[:email], password: args[:password])
+    user = User.find_by(args.first)
     user.update_attributes(auth_token: SecureRandom.hex(10)) unless user.auth_token
     user
   end
