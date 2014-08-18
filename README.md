@@ -1,4 +1,15 @@
-todo using arm
-=============
+# Simple To-Do Application using Angularjs-Rails-Mongodb
+### Rails Backend
+> POST
+``` ruby
+/authentication
+```
 
-A Simple To Do application with Angular + Rails + Mongo => ARM
+> DELETE
+``` ruby
+/authentication/:email_id/:auth_id
+```
+
+### AngularJs front-end
+
+To be built
