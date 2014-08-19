@@ -1,7 +1,6 @@
 class AuthenticationController < ApplicationController
 
-  rescue_from "ActionController::UnpermittedParameters", "Mongoid::Errors::DocumentNotFound", with: :invalid_creds
-
+  skip_before_action :valid_user
   # POST /user
   def create
     user = User.authenticate(user_params)
@@ -19,10 +18,6 @@ class AuthenticationController < ApplicationController
 
   def user_params
     params.permit(:email, :password)
-  end
-
-  def invalid_creds
-    render json: 'Invalid credentials', status: :not_found
   end
 
 end
