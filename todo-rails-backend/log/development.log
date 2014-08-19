@@ -1,2 +1,692 @@
   MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2693ms
   MOPED: 127.0.0.1:27017 COMMAND      database=todo_development command={:count=>"users", :query=>{}} runtime: 13.9780ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9347ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 20:41:09 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 41.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-18 20:41:14 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.5ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (177.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-18 20:41:27 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1834ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1084ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-08-18 20:51:32 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.6ms)
+
+
+Started GET "/users/1/tasks" for 127.0.0.1 at 2014-08-18 20:51:45 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/1/tasks"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.4ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7463ms
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 2.1148ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7514ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.6343ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7446ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"email"=>"ramanbedi@gmail.com"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 0.5301ms
+  MOPED: 127.0.0.1:27017 INSERT       database=todo_development collection=users documents=[{"_id"=>BSON::ObjectId('53f21ba872616d2424000000'), "email"=>"ramanbedi@gmail.com", "password"=>"hello", "updated_at"=>2014-08-18 15:28:40 UTC, "created_at"=>2014-08-18 15:28:40 UTC}] flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 55.9920ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9364ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8280ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$push"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f21c5072616d2424010000'), "title"=>"ramanbedi@gmail.com", "description"=>"hello", "complete_till"=>2014-08-18 15:31:28 UTC, "updated_at"=>2014-08-18 15:31:28 UTC, "created_at"=>2014-08-18 15:31:28 UTC}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 1.0517ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6361ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6515ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.6134ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6542ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1645ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 11:03:34 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 41ms (Views: 40.5ms)
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:04:16 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/53f21ba872616d2424000000/tasks"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.5ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.4ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9618ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6766ms
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:05:45 +0530
+
+LoadError (Unable to autoload constant TasksController, expected /home/raman/ruby_workspace/todo-with-arm/todo-rails-backend/app/controllers/tasks_controller.rb to define it):
+  activesupport (4.1.4) lib/active_support/dependencies.rb:481:in `load_missing_constant'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn-rails (2.1.1) lib/unicorn_rails.rb:26:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.1.4) lib/rails/commands/server.rb:69:in `start'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:81:in `block in server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `tap'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:76:in `server'
+  railties (4.1.4) lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+  railties (4.1.4) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `load'
+  spring (1.1.3) lib/spring/client/rails.rb:27:in `call'
+  spring (1.1.3) lib/spring/client/command.rb:7:in `call'
+  spring (1.1.3) lib/spring/client.rb:26:in `run'
+  spring (1.1.3) bin/spring:48:in `<top (required)>'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `load'
+  spring (1.1.3) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:16:in `require'
+  bin/spring:16:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.4ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1458ms
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:06:47 +0530
+Processing by TasksController#index as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.3669ms
+Completed 200 OK in 22ms (Views: 1.5ms)
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:08:49 +0530
+Processing by TasksController#index as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5105ms
+Completed 200 OK in 14ms (Views: 0.4ms)
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 11:09:50 +0530
+Processing by TasksController#show as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5518ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:18:13 +0530
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z", "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4736ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3980ms
+Completed 422 Unprocessable Entity in 247ms (Views: 0.2ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8138ms
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:21:15 +0530
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z", "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8584ms
+Completed 500 Internal Server Error in 18ms
+
+ActionController::UnpermittedParameters (found unpermitted parameters: user_id):
+  app/controllers/tasks_controller.rb:64:in `task_params'
+  app/controllers/tasks_controller.rb:31:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7804ms
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:22:04 +0530
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z", "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.0932ms
+Completed 500 Internal Server Error in 27ms
+
+Mongoid::Errors::UnknownAttribute (
+Problem:
+  Attempted to set a value for 'user_id' which is not allowed on the model Task.
+Summary:
+  Without including Mongoid::Attributes::Dynamic in your model and the attribute does not already exist in the attributes hash, attempting to call Task#user_id= for it is not allowed. This is also triggered by passing the attribute to any method that accepts an attributes hash, and is raised instead of getting a NoMethodError.
+Resolution:
+  You can include Mongoid::Attributes::Dynamic if you expect to be writing values for undefined fields often.):
+  app/controllers/tasks_controller.rb:31:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:39:25 +0530
+
+SyntaxError (/home/raman/ruby_workspace/todo-with-arm/todo-rails-backend/app/controllers/tasks_controller.rb:64: syntax error, unexpected ',', expecting =>
+...ion, :complete_till], :user_id, :id)
+...                               ^):
+  app/controllers/tasks_controller.rb:64: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:40:32 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4273ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3445ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$push"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f2ea5872616d0e4b000000'), "title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>2014-08-18 15:31:28 UTC, "updated_at"=>2014-08-19 06:10:32 UTC, "created_at"=>2014-08-19 06:10:32 UTC}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.7120ms
+Completed 500 Internal Server Error in 15ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tasks", :format=>nil, :id=>nil, :user_id=>#<Task _id: 53f2ea5872616d0e4b000000, title: "Mr. Bedi", description: "Done with tasks controller", complete_till: 2014-08-18 15:31:28 UTC, created_at: 2014-08-19 06:10:32 UTC, updated_at: 2014-08-19 06:10:32 UTC>} missing required keys: [:id]):
+  app/controllers/tasks_controller.rb:34:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.3967ms
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:41:12 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.2974ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$push"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f2ea8072616d0ecd000000'), "title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>2014-08-18 15:31:28 UTC, "updated_at"=>2014-08-19 06:11:12 UTC, "created_at"=>2014-08-19 06:11:12 UTC}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.9087ms
+Completed 500 Internal Server Error in 27ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tasks", :format=>nil, :id=>nil, :user_id=>#<Task _id: 53f2ea8072616d0ecd000000, title: "Mr. Bedi", description: "Done with tasks controller", complete_till: 2014-08-18 15:31:28 UTC, created_at: 2014-08-19 06:11:12 UTC, updated_at: 2014-08-19 06:11:12 UTC>} missing required keys: [:id]):
+  app/controllers/tasks_controller.rb:34:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6699ms
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:42:48 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.3396ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$push"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f2eae072616d0ede000000'), "title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>2014-08-18 15:31:28 UTC, "updated_at"=>2014-08-19 06:12:48 UTC, "created_at"=>2014-08-19 06:12:48 UTC}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.7653ms
+Completed 500 Internal Server Error in 31ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tasks", :format=>nil, :id=>nil, :user_id=>#<Task _id: 53f2eae072616d0ede000000, title: "Mr. Bedi", description: "Done with tasks controller", complete_till: 2014-08-18 15:31:28 UTC, created_at: 2014-08-19 06:12:48 UTC, updated_at: 2014-08-19 06:12:48 UTC>} missing required keys: [:id]):
+  app/controllers/tasks_controller.rb:34:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.4380ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.6947ms
+
+
+Started POST "/users/53f21ba872616d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:46:03 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5334ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$push"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f2eba372616d0ede010000'), "title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>2014-08-18 15:31:28 UTC, "updated_at"=>2014-08-19 06:16:03 UTC, "created_at"=>2014-08-19 06:16:03 UTC}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.5028ms
+Completed 201 Created in 13ms (Views: 0.8ms)
+
+
+Started POST "/users/53f21ba16d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:46:32 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba16d2424000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>"53f21ba16d2424000000"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3690ms
+Completed 404 Not Found in 8ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class User with id(s) 53f21ba16d2424000000.
+Summary:
+  When calling User.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 53f21ba16d2424000000 ... (1 total) and the following ids were not found: 53f21ba16d2424000000.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/tasks_controller.rb:31:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started POST "/users/53f21ba16d2424000000/tasks" for 127.0.0.1 at 2014-08-19 11:47:43 +0530
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"title"=>"Mr. Bedi", "description"=>"Done with tasks controller", "complete_till"=>"2014-08-18T15:31:28.282Z"}, "user_id"=>"53f21ba16d2424000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4199ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>"53f21ba16d2424000000"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1828ms
+Completed 404 Not Found in 7ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class User with id(s) 53f21ba16d2424000000.
+Summary:
+  When calling User.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 53f21ba16d2424000000 ... (1 total) and the following ids were not found: 53f21ba16d2424000000.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/tasks_controller.rb:31:in `create'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6576ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.3704ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.1075ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000'), "tasks._id"=>BSON::ObjectId('53f2eae072616d0ede000000')} update={"$set"=>{"tasks.$.description"=>"hello", "tasks.$.updated_at"=>2014-08-19 06:20:29 UTC}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 1.1025ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.3440ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2154ms
+
+
+Started PUT "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 11:53:30 +0530
+Processing by TasksController#update as */*
+  Parameters: {"task"=>{"complete_till"=>"2014-08-19T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4236ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5300ms
+Completed 500 Internal Server Error in 13ms
+
+Mongoid::Errors::InvalidFind (
+Problem:
+  Calling Document.find with nil is invalid.
+Summary:
+  Document.find expects the parameters to be 1 or more ids, and will return a single document if 1 id is provided, otherwise an array of documents if multiple ids are provided.
+Resolution:
+  Most likely this is caused by passing parameters directly through to the find, and the parameter either is not present or the key from which it is accessed is incorrect.):
+  app/controllers/tasks_controller.rb:43:in `update'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started PUT "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 11:54:24 +0530
+Processing by TasksController#update as */*
+  Parameters: {"task"=>{"complete_till"=>"2014-08-19T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7211ms
+Completed 500 Internal Server Error in 19ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/tasks_controller.rb:45:in `update'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2581ms
+
+
+Started PUT "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 12:01:43 +0530
+Processing by TasksController#update as */*
+  Parameters: {"task"=>{"complete_till"=>"2014-08-19T15:31:28.282Z"}, "user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9437ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000'), "tasks._id"=>BSON::ObjectId('53f21c5072616d2424010000')} update={"$set"=>{"tasks.$.complete_till"=>2014-08-19 15:31:28 UTC, "tasks.$.updated_at"=>2014-08-19 06:31:43 UTC}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.6856ms
+Completed 200 OK in 25ms (Views: 0.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5826ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.1216ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2654ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2336ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6168ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.1331ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$pull"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f2eba372616d0ede010000')}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.7249ms
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 12:31:39 +0530
+Processing by TasksController#show as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4940ms
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5031ms
+Completed 200 OK in 13ms (Views: 0.6ms)
+
+
+Started DELETE "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 12:31:53 +0530
+Processing by TasksController#destroy as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9772ms
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `user_id' for #<TasksController:0xb2be8b8>):
+  app/controllers/tasks_controller.rb:58:in `destroy'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2002ms
+
+
+Started DELETE "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 12:33:27 +0530
+Processing by TasksController#destroy as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8966ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} update={"$pull"=>{"tasks"=>{"_id"=>BSON::ObjectId('53f21c5072616d2424010000')}}} flags=[]
+                         COMMAND      database=todo_development command={:getlasterror=>1, :w=>1} runtime: 0.5659ms
+Completed 200 OK in 16ms (Views: 1.0ms)
+
+
+Started GET "/users/53f21ba872616d2424000000/tasks/53f21c5072616d2424010000" for 127.0.0.1 at 2014-08-19 12:33:32 +0530
+Processing by TasksController#show as */*
+  Parameters: {"user_id"=>"53f21ba872616d2424000000", "id"=>"53f21c5072616d2424010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=todo_development collection=users selector={"_id"=>BSON::ObjectId('53f21ba872616d2424000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5191ms
+Completed 404 Not Found in 9ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Task with id(s) 53f21c5072616d2424010000.
+Summary:
+  When calling Task.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 53f21c5072616d2424010000 ... (1 total) and the following ids were not found: 53f21c5072616d2424010000.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/tasks_controller.rb:15:in `show'
+
+
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raman/.rvm/gems/ruby-2.1.2@gdg/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
