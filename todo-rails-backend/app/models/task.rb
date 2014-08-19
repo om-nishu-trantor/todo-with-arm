@@ -1,11 +1,7 @@
-class Task
-  include Mongoid::Document
-
+class Task < MongoidBase
   field :title, type: String
   field :description, type: String
   field :complete_till, type: DateTime
-
-  include Mongoid::Timestamps
 
   embedded_in :user
 

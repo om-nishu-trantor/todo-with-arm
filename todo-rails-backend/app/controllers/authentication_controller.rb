@@ -5,7 +5,7 @@ class AuthenticationController < ApplicationController
   # POST /user
   def create
     user = User.authenticate(user_params)
-    render json: user, only: [:auth_token, :email], status: :ok
+    render json: user, only: [:auth_token, :email, :_id], status: :ok
   end
 
   # DELETE /user/email_id/auth_id
