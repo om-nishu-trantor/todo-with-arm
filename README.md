@@ -4,6 +4,10 @@
 ``` ruby
 /authentication
 ```
+> Parameter name
+#### email
+#### password
+
 
 > DELETE
 ``` ruby
