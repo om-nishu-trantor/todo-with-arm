@@ -33,8 +33,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /tasks/1
-  # PATCH/PUT /tasks/1.json
   def update
     user = User.find(params[:user_id])
     if user
@@ -49,8 +47,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
   def destroy
     user = User.find(params[:user_id])
     if user
