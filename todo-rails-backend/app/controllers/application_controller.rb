@@ -6,11 +6,11 @@ class ApplicationController < ActionController::API
   private
 
   def valid_user
-    user = User.find(params[:user_id])
+    user = User.find_by(auth_token: request.headers["auth_token"], id: params[:user_id])
   end
 
   def invalid_creds
-    render json: 'Invalid credentials', status: :not_found
+    render json: { message: 'Invalid credentials' }, status: :not_found
   end
 
 end
