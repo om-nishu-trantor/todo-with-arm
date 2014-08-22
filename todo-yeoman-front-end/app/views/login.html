@@ -1,0 +1,22 @@
+<div ng-controller="LoginCtrl">
+  This is login page ...
+  We are currently under maintenance mode...
+  Please come back later....
+
+  <div>
+    {{credentials.email}}
+    {{credentials.password}}
+  </div>
+
+
+  <form name="loginForm" ng-submit="login()">
+    <input ng-model="loginData.email" type="email" /><br/>
+    <input ng-model="loginData.password" type="password" /><br/>
+    <input type="submit" value="Login" /><br/>
+  </form>
+
+
+  <form action="#">
+  </form>
+
+</div>
