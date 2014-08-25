@@ -1,20 +1,16 @@
 <div ng-controller="LoginCtrl">
-  This is login page ...
-  We are currently under maintenance mode...
-  Please come back later....
 
-  <div>
-    {{credentials.email}}
-    {{credentials.password}}
-  </div>
+  <form name="loginForm" ng-submit="login(loginData)" novalidate>
+    <input ng-model="loginData.email" class="form-control" type="email" placeholder="Email" required /><br/>
+    <span class="error" ng-show="loginForm.email.$error.required">Please enter a valid Email</span>
 
+    <input ng-model="loginData.password" class="form-control" type="password" placeholder="Password" required /><br/>
+    <span class="error" ng-show="loginForm.password.$error.required">Please enter password</span>
 
-  <form name="loginForm" ng-submit="login()">
-    <input ng-model="loginData.email" type="email" /><br/>
-    <input ng-model="loginData.password" type="password" /><br/>
-    <input type="submit" value="Login" /><br/>
+    <input type="submit" value="Login" ng-disabled="loginForm.$invalid" class="btn btn-default" />
   </form>
 
+  <br/>
 
   <form action="#">
   </form>

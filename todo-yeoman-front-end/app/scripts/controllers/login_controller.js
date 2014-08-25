@@ -10,20 +10,27 @@
 angular.module('todosApp')
     .controller('LoginCtrl', function ($scope, $http/*, $locationProvider*/) {
       var email, password;
-      this.loginData={};
+      $scope.loginData={email: '', password: ''};
+        $scope.login =  function(loginData) {
 
-      var login = function(loginData){
-        if(loginData.password && loginData.email){
-          console.log(loginData.password)
-          return;
-        };
+          console.log('***********');
+          console.log(loginData);
+          console.log('***********');
 
-        if(!loginData.email){
-          console.log('No email and Password set');
-          return;
-        }
+          $http.post('http://localhost:3000/authentication', loginData).
+              success(function(data, status, headers, config) {
+                console.log(data);
+                console.log('SUCCESS');
+
+              }).
+              error(function(data, status, headers, config) {
+                console.log('ERROR');
+                console.log(data);
+              });
 
       }
+      $scope.loginData={};
+//      }
 
 //      $http.post
 
