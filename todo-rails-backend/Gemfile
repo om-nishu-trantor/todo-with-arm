@@ -23,5 +23,7 @@ end
 gem 'unicorn'
 gem 'unicorn-rails'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
