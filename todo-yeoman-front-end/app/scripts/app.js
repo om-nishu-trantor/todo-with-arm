@@ -8,16 +8,18 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('todosApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'base64'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+
+  app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
@@ -25,8 +27,7 @@ angular
       })
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl',
-        requireLogin: true
+        controller: 'LoginCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
