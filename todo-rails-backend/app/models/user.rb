@@ -13,4 +13,8 @@ class User < MongoidBase
     user
   end
 
+  def id
+    self._id.to_s
+  end
+
 end

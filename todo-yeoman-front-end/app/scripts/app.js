@@ -34,6 +34,10 @@ var app = angular
         controller: 'AboutCtrl',
         requireLogin: true
       })
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

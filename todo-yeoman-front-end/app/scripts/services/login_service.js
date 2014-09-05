@@ -10,7 +10,7 @@
 
 app.service('loginService', ['$http', 'appConfig', function($http, appConfig) {
   var postParams, promise, baseUrl, url;
-  baseUrl = appConfig.domainName;
+  var baseUrl = appConfig.domainName;
 
   return{
     login: function(credentials) {
