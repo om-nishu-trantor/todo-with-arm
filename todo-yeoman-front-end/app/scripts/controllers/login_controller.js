@@ -7,20 +7,21 @@
  * # LoginCtrl
  * Controller of the todosApp
  */
-app.controller('LoginCtrl', function ($scope, $http, loginService, sessionService) {
+app.controller('LoginCtrl', ['$scope', '$location', 'loginService', 'sessionService', function ($scope, $location, loginService, sessionService) {
   var email, password;
   $scope.loginData = {email: '', password: ''};
   $scope.login = function (loginData) {
     var request = loginService.login(loginData);
     request.then(
       function (promise) { // Success callback
-        console.log(promise);
-        sessionService.isLogin();
+        if (sessionService.setSession(promise.data)){
+//          $location.path('/dashboard')
+        }
       },
       function (error) { // Error callback
         console.log(error);
-        sessionService.isLogin();
+        console.log(sessionService.isLogin());
       }
     )
   };
-});
+}]);
