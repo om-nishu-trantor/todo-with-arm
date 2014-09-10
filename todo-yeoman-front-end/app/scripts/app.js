@@ -17,9 +17,12 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'base64'
-  ])
+  ]);
 
-  app.config(function ($routeProvider, $locationProvider) {
+  app.config(function ($routeProvider, $locationProvider, $httpProvider) {
+
+    $httpProvider.interceptors.push('sessionInterceptor');
+
     $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
