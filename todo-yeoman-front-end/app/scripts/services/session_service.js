@@ -16,7 +16,7 @@ app.service('sessionService', ['$cookieStore', '$base64', function($cookieStore,
     setSession: function(credentials){
     //  Accepts credentials with application_id as 'auth_token' and user_id as 'id'
     //  Example {auth_token: 'random_alphanumeric_string', id: 'id_of_user'}
-      $cookieStore.put(sessionKey, $base64.encode(JSON.stringify(credentials));
+      $cookieStore.put(sessionKey, $base64.encode(JSON.stringify(credentials)));
       return !!$cookieStore.get(sessionKey);
     },
     getSession: function(){
@@ -26,7 +26,7 @@ app.service('sessionService', ['$cookieStore', '$base64', function($cookieStore,
     },
     isLogin: function(sessionId){
     //  Returns true/false based on session/login present or not by checking session
-      return !!$base64.decode($cookieStore.get(sessionKey));
+      return !!$cookieStore.get(sessionKey);
     },
     deleteSession: function(sessionId){
     //  when user Logs out from the sesison, this deletes the session
