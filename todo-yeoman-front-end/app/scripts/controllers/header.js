@@ -8,7 +8,7 @@
  * Controller of the todosApp
  */
 app.controller('HeaderCtrl', ['sessionService', '$scope', function (sessionService, $scope) {
-
-  $scope.validUser = sessionService.isLogin();
-
+  $scope.$on('$routeChangeStart', function(next, current) { 
+    $scope.validUser = sessionService.isLogin();
+  });
 }]);
