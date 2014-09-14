@@ -17,7 +17,7 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'base64'
-  ])
+  ]);
 
   app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -36,9 +36,29 @@ var app = angular
       })
       .when('/dashboard', {
         templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
+        controller: 'DashboardCtrl',
+        requireLogin: true
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+app.run(['$rootScope', '$location', 'sessionService', function($rootScope, $location, sessionService){
+    $rootScope.$on('$routeChangeStart', function(event, next, current){
+        console.log(next);
+        if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
+            event.preventDefault();
+            $location.path('/dashboard')
+        }
+    });
+
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
+        $rootScope.validUser = sessionService.isLogin();
+        if(!(next.requireLogin && sessionService.isLogin())){
+            event.preventDefault();
+            $location.path('/login');
+        }
+    });
+}]);
+

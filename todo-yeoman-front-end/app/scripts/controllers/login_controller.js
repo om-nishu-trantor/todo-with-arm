@@ -21,7 +21,7 @@ app.controller('LoginCtrl', ['$scope', '$http', '$location', 'loginService', 'se
       function (error) { // Error callback
         console.log(error);
         sessionService.isLogin();
-//          TODO add shae effect on fail....
+//          TODO add shake effect on fail....
       }
     )
   };

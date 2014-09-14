@@ -24,11 +24,11 @@ app.service('sessionService', ['$cookieStore', '$base64', function($cookieStore,
       var aidUid = JSON.parse($base64.decode($cookieStore.get(sessionKey)));
       return aidUid;
     },
-    isLogin: function(sessionId){
+    isLogin: function(){
     //  Returns true/false based on session/login present or not by checking session
       return !!$cookieStore.get(sessionKey);
     },
-    deleteSession: function(sessionId){
+    deleteSession: function(){
     //  when user Logs out from the sesison, this deletes the session
       return $cookieStore.remove(sessionKey);
     }
