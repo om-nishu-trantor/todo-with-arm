@@ -44,9 +44,8 @@ var app = angular
       });
   });
 
-app.run(['$rootScope', '$location', 'sessionService', function($rootScope, $location, sessionService){
+app.run(['$http','$rootScope', '$location', 'sessionService', function($http, $rootScope, $location, sessionService){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        console.log(next);
         if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
             event.preventDefault();
             $location.path('/dashboard')
@@ -60,5 +59,6 @@ app.run(['$rootScope', '$location', 'sessionService', function($rootScope, $loca
             $location.path('/login');
         }
     });
+    $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
 }]);
 

@@ -1,6 +1,6 @@
 <div ng-controller="LoginCtrl">
 
-  <form name="loginForm" ng-submit="login(loginData)" novalidate>
+  <form name="loginForm" ng-submit="login()" novalidate>
     <input ng-model="loginData.email" class="form-control" type="email" placeholder="Email" required /><br/>
     <span class="error" ng-show="loginForm.email.$error.required">Please enter a valid Email</span>
 

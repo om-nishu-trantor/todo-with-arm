@@ -10,12 +10,11 @@
 app.controller('LoginCtrl', ['$scope', '$http', '$location', 'loginService', 'sessionService',function ($scope, $http, $location, loginService, sessionService) {
   var email, password;
   $scope.loginData = {email: '', password: ''};
-  $scope.login = function (loginData) {
-    var request = loginService.login(loginData);
+  $scope.login = function () {
+    var request = loginService.login($scope.loginData);
     request.then(
       function (promise) { // Success callback
-        console.log(promise);
-        sessionService.setSession(loginData);
+        sessionService.setSession(promise.data);
         if(sessionService.isLogin()) $location.path('/dashboard');
       },
       function (error) { // Error callback

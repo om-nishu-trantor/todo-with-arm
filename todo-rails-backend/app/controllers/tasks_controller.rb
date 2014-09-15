@@ -3,7 +3,7 @@ class TasksController < ApplicationController
     user = User.find(params[:user_id])
     if user
       tasks = user.tasks
-      render json: tasks
+      render json: tasks, methods: :id
     else
       render json: { message: 'User not found' }.to_json, status: :not_found
     end
@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     if user
       task = user.tasks.find(params[:id])
       if task
-        render json: task, status: :ok
+        render json: task, methods: :id, status: :ok
       else
         render json: { message: 'Task not found' }.to_json, status: :not_found
       end
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     user_id = params[:user_id]
     task = User.find(user_id).tasks.new(task_params[:task])
     if task.save
-      render json: task, status: :created
+      render json: task, methods: :id, status: :created
     else
       render json: task.errors, status: :unprocessable_entity
     end
@@ -38,7 +38,7 @@ class TasksController < ApplicationController
     if user
       task = user.tasks.find(params[:id])
       if task && task.update(task_update_params[:task])
-        render json: task, status: :ok
+        render json: task, methods: :id, status: :ok
       else
         render json: { message: 'Task not found' }.to_json, status: :not_found
       end
@@ -52,7 +52,7 @@ class TasksController < ApplicationController
     if user
       task = user.tasks.find(params[:id])
       if task && task.delete
-        render json: task, status: :ok
+        render json: task, methods: :id, status: :ok
       else
         render json: { message: 'Task not found' }.to_json, status: :not_found
       end
