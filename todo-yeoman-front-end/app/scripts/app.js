@@ -49,7 +49,7 @@ app.run(['$http','$rootScope', '$location', 'sessionService', function($http, $r
     $rootScope.$on('$routeChangeStart', function(event, next, current){
         if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
             event.preventDefault();
-            $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
+//            $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
             $location.path('/dashboard')
         }
     });
