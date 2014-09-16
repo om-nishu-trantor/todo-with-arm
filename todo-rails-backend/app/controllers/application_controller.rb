@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
   private
 
   def valid_user
-    user = User.find_by(auth_token: request.headers["auth_token"], id: params[:user_id])
+    user = User.find_by(auth_token: request.headers["auth-token"], id: params[:user_id])
   end
 
   def invalid_creds

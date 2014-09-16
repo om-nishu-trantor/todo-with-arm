@@ -8,10 +8,10 @@
  * Controller of the todosApp
  */
 angular.module('todosApp')
-  .controller('DashboardCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('DashboardCtrl',['$scope','dashboardService',function ($scope, dashboardService) {
+    dashboardService.getTodos().success(function(data){
+      $scope.todos = data;
+    }).error(function(data){
+      alert(data.message);
+    });
+  }]);
