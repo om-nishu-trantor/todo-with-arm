@@ -16,7 +16,8 @@ var app = angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'base64'
+    'base64',
+    'ui.bootstrap'
   ]);
 
   app.config(function ($routeProvider, $locationProvider) {
@@ -46,9 +47,9 @@ var app = angular
 
 app.run(['$http','$rootScope', '$location', 'sessionService', function($http, $rootScope, $location, sessionService){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
+        $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
         if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
             event.preventDefault();
-            $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
             $location.path('/dashboard')
         }
     });
