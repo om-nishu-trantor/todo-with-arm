@@ -20,7 +20,9 @@ app.service('sessionService', ['$cookieStore', '$base64', function($cookieStore,
   };
   this.getSession = function(){
   //  Retrieve session if present for this browser
-    var aidUid = JSON.parse($base64.decode($cookieStore.get(sessionKey)));
+    var sessionToDo = $cookieStore.get(sessionKey);
+    if(!sessionToDo) return;
+    var aidUid = JSON.parse($base64.decode(sessionToDo));
     return aidUid;
   };
   this.isLogin = function(){

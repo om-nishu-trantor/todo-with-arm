@@ -20,7 +20,8 @@ var app = angular
     'ui.bootstrap'
   ]);
 
-  app.config(function ($routeProvider, $locationProvider) {
+  app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+    $httpProvider.interceptors.push('sessionInterceptor');
     $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
@@ -43,11 +44,10 @@ var app = angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
 
 app.run(['$http','$rootScope', '$location', 'sessionService', function($http, $rootScope, $location, sessionService){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        $http.defaults.headers.common["auth-token"] = sessionService.getSession().auth_token;
         if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
             event.preventDefault();
             $location.path('/dashboard')
