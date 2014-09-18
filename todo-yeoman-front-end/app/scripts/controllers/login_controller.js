@@ -9,6 +9,7 @@
  */
  app.controller('LoginCtrl', ['$scope', '$http', '$location', 'loginService', 'sessionService', '$animate', '$timeout',function ($scope, $http, $location, loginService, sessionService, $animate, $timeout) {
   var email, password;
+  $scope.errorMessage = false;
   $scope.loginData = {email: '', password: ''};
   $scope.login = function () {
     if($scope.loginForm.$valid){
@@ -19,10 +20,11 @@
         if(sessionService.isLogin()) $location.path('/dashboard');
       },
       function (error) { // Error callback
-        sessionService.isLogin();
+        $scope.errorMessage = error.data.message;
       });
     }
     else{
+debugger;
       var formElement = angular.element('form');
       $animate.addClass(formElement, 'shake', function() {
         $timeout(function(){

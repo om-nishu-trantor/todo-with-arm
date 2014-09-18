@@ -2,7 +2,7 @@
 <accordion >
   <accordion-group ng-repeat="todo in todos">
       <accordion-heading>
-        <span ng-hide="todo.done">{{todo.title}}</span> <s ng-show="todo.done">{{todo.title}}</s> <span class='glyphicon pull-right' ng-class="{'glyphicon-ok': todo.done, 'glyphicon-remove': !todo.done }" ></span>
+        <div class="pointer"><span ng-hide="todo.done">{{todo.title}}</span> <s ng-show="todo.done">{{todo.title}}</s> <span class='glyphicon pull-right' ng-class="{'glyphicon-ok': todo.done, 'glyphicon-remove': !todo.done }" ></span></div>
       </accordion-heading>
       <b>Description:</b> {{todo.description}} <br/>
       <b>Due On:</b> {{todo.complete_till | date: 'longDate' }}<br/>

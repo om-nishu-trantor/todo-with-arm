@@ -91,11 +91,12 @@ body {
   }
 }
 
-.ng-dirty.ng-invalid { color: red; }
-.form-control.ng-dirty.ng-invalid {
+.ng-dirty.ng-invalid, .ng-submitted .ng-invalid { color: red; }
+.ng-submitted .ng-invalid, .form-control.ng-dirty.ng-invalid {
   border-color: red;
   box-shadow: inset red, red;
 }
+
 .ng-valid { color: green; }
 .form-control.ng-dirty.ng-valid {
   border-color: green;
@@ -119,3 +120,4 @@ span.error { color: red; font-weight: bold; }
 .shake {
   animation: shake 400ms ease-in-out;
 }
+.pointer { cursor: pointer }

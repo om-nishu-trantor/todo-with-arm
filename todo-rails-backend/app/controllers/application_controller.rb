@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
 
   before_action :valid_user
-  rescue_from "ActionController::UnpermittedParameters", "Mongoid::Errors::DocumentNotFound", with: :invalid_creds
+  rescue_from "ActionController::UnpermittedParameters", with: :bad_request
+  rescue_from "Mongoid::Errors::DocumentNotFound", with: :invalid_creds
 
   private
 
@@ -10,7 +11,11 @@ class ApplicationController < ActionController::API
   end
 
   def invalid_creds
-    render json: { message: 'Invalid credentials' }, status: :not_found
+    render json: { message: 'Invalid credentials' }, status: 401
+  end
+
+  def bad_request
+    render json: { message: 'Unknown parameters' }, status: 400
   end
 
 end
