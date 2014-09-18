@@ -91,14 +91,14 @@ body {
   }
 }
 
-.ng-dirty.ng-invalid, .ng-submitted .ng-invalid { color: red; }
-.ng-submitted .ng-invalid, .form-control.ng-dirty.ng-invalid {
+.ng-dirty.ng-invalid, .ng-submitted.ng-invalid { color: red; }
+.ng-submitted .ng-invalid, .form-control.ng-dirty.ng-invalid, .ng-invalid-email {
   border-color: red;
   box-shadow: inset red, red;
 }
 
 .ng-valid { color: green; }
-.form-control.ng-dirty.ng-valid {
+.form-control.ng-valid{
   border-color: green;
   box-shadow: inset green, green;
 }
