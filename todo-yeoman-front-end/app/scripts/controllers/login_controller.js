@@ -11,13 +11,10 @@
   var email, password;
   $scope.errorMessage = false;
   $scope.loginData = {email: '', password: ''};
-//   Workaround for autofills as they do not broadcast an event.
-  $timeout(function(){
+  $scope.login = function () {
+    //   Workaround for autofills as they do not broadcast an event.
     $scope.loginData.email = loginForm.elements['email'].value;
     $scope.loginData.password = loginForm.elements['password'].value;
-  }, 400);
-
-  $scope.login = function () {
 
     if($scope.loginForm.$valid){
       var request = loginService.login($scope.loginData);
@@ -31,12 +28,7 @@
       });
     }
     else{
-<<<<<<< Updated upstream
-debugger;
-      var formElement = angular.element('form');
-=======
       var formElement = loginForm;
->>>>>>> Stashed changes
       $animate.addClass(formElement, 'shake', function() {
         $timeout(function(){
           $animate.removeClass(formElement, 'shake');
