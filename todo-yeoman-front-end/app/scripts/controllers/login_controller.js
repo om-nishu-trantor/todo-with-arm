@@ -12,6 +12,7 @@
   $scope.errorMessage = false;
   $scope.loginData = {email: '', password: ''};
   $scope.login = function () {
+    $scope.errorMessage = false;
     //   Workaround for autofills as they do not broadcast an event.
     $scope.loginData.email = loginForm.elements['email'].value;
     $scope.loginData.password = loginForm.elements['password'].value;
