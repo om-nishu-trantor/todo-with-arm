@@ -18,6 +18,14 @@ angular.module('todosApp')
       alert(data.message);
     });
 
+  $scope.customDoneFilter = function(item){
+    if($scope.showDone){
+      return !item.done;
+    }else{
+      return true;
+    }
+  };
+
   $scope.openModal = function(createTodo, todo){
     var modalInstance = $modal.open({
       templateUrl: 'views/todoModal.html',
