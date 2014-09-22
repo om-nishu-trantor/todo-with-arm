@@ -1,6 +1,30 @@
-<p>This is the dashboard view.</p>
-<ul>
-  <li ng-repeat="todo in todos">
-    {{todo.title}}
-  </li>
-</ul>
+<div class="row">
+  <div class="col-sm-6 buttons_container">
+    <a class="btn btn-primary" ng-click="openModal(true)">Add Todo</a>
+  </div>
+  <div class="col-sm-6 buttons_container">
+    <div class="pull-right">
+    <label>Sort By :</label>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" ng-click="order_param = 'title'">Title</button>
+      <button type="button" class="btn btn-primary" ng-click="order_param = 'complete_till'">Date</button>
+    </div>
+    </div>
+  </div>
+  <div class="col-sm-12 buttons_container">
+    <div class="pull-right">
+    <label for="show_done">Show Pending Tasks :</label><input id="show_done" type="checkbox" ng-model="showDone">
+  </div>
+  </div>
+</div>
+
+<accordion >
+  <accordion-group ng-repeat="todo in todos | filter:customDoneFilter | orderBy:order_param ">
+      <accordion-heading>
+        <div class="pointer"><span ng-hide="todo.done">{{todo.title}}</span> <s ng-show="todo.done">{{todo.title}}</s> <span class='glyphicon pull-right' ng-class="{'glyphicon-ok': todo.done, 'glyphicon-remove': !todo.done }" ></span></div>
+      </accordion-heading>
+      <b>Description:</b> {{todo.description}} <br/>
+      <b>Due On:</b> {{todo.complete_till | date: 'longDate' }}<br/>
+      <a class="btn btn-primary" ng-click="openModal(false,todo)">Edit</a>
+  </accordion-group>
+</accordion>

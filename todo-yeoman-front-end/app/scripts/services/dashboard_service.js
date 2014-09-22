@@ -8,11 +8,18 @@
  * Service in the todosApp.
  */
 angular.module('todosApp')
-  .service('dashboardService', ['$http', 'appConfig', 'sessionService', function dashboardService($http, appConfig, sessionService) {
+  .factory('dashboardService', ['$http', 'appConfig', 'sessionService', function dashboardService($http, appConfig, sessionService) {
     var baseUrl = appConfig.domainName;
     var userId = sessionService.getSession().id;
-
-    this.getTodos = function () {
-      return $http.get(baseUrl + "/users/" + userId + "/todos");
+    return {
+      getTodos: function () {
+        return $http.get(baseUrl + "/users/" + userId + "/tasks");
+      },
+      updateTodo: function (todo) {
+        return $http.put(baseUrl + "/users/" + userId + "/tasks/" + todo.id, {"task": todo});
+      },
+      createTodo: function (todo) {
+        return $http.post(baseUrl + "/users/" + userId + "/tasks", {"task": todo});
+      }
     }
   }]);

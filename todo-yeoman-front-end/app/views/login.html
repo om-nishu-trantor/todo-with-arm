@@ -1,18 +1,21 @@
 <div ng-controller="LoginCtrl">
 
-  <form name="loginForm" ng-submit="login(loginData)" novalidate>
-    <input ng-model="loginData.email" class="form-control" type="email" placeholder="Email" required /><br/>
-    <span class="error" ng-show="loginForm.email.$error.required">Please enter a valid Email</span>
+  <span class="error" ng-show="errorMessage"> {{ errorMessage }}</span>
 
-    <input ng-model="loginData.password" class="form-control" type="password" placeholder="Password" required /><br/>
-    <span class="error" ng-show="loginForm.password.$error.required">Please enter password</span>
+  <form name="loginForm" ng-submit="login()" novalidate>
+    <input ng-model="loginData.email" class="form-control" type="email" name="email" placeholder="Email" required />
+    <span class="error" ng-show="(loginForm.email.$error.required && (loginForm.email.$dirty || loginForm.$submitted)) || loginForm.email.$error.email">Please enter a valid Email</span>
 
-    <input type="submit" value="Login" ng-disabled="loginForm.$invalid" class="btn btn-default" />
+
+    <br/><br/>
+
+    <input ng-model="loginData.password" class="form-control" name="password" type="password" placeholder="Password" required />
+    <span class="error" ng-show="loginForm.password.$error.required && (loginForm.password.$dirty || loginForm.$submitted) && loginForm.password.$invalid">Please enter password</span>
+    <br/>
+
+    <input type="submit" value="Login" class="btn btn-default" />
   </form>
 
   <br/>
-
-  <form action="#">
-  </form>
 
 </div>
