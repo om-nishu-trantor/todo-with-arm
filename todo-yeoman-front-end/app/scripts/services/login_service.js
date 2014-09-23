@@ -25,10 +25,12 @@ app.service('loginService', ['$http', 'appConfig', function($http, appConfig) {
     logout: function(credentials) {
       postParams = {
         'email': credentials.email,
-        'appId': credentials.appId
+        'auth_id': credentials.auth_token
       };
-      url = baseUrl + '/authentication/' + postParams.email + postParams.appId;
-      promise = $http.get(url);
+
+      url = baseUrl + '/authentication/' + postParams.email + '/' + postParams.auth_id;
+      promise = $http.delete(url);
+      return promise;
     }
   }
 

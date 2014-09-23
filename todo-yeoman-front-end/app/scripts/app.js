@@ -47,19 +47,17 @@ var app = angular
   }]);
 
 app.run(['$http','$rootScope', '$location', 'sessionService', function($http, $rootScope, $location, sessionService){
-    $rootScope.$on('$routeChangeStart', function(event, next, current){
-        if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
-            event.preventDefault();
-            $location.path('/dashboard')
-        }
-    });
-
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
-        $rootScope.validUser = sessionService.isLogin();
-        if(!(next.requireLogin && sessionService.isLogin())){
-            event.preventDefault();
-            $location.path('/login');
-        }
+      $rootScope.validUser = sessionService.isLogin();
+      if(next.requireLogin==true && !sessionService.isLogin()){
+          event.preventDefault();
+          $location.path('/login');
+      };
+
+      if(next.$$route.originalPath.indexOf('/login')!=(-1) && sessionService.isLogin()){
+        event.preventDefault();
+        $location.path('/dashboard')
+      };
     });
 }]);
 

@@ -7,10 +7,18 @@
  * # HeaderCtrl
  * Controller of the todosApp
  */
-app.controller('HeaderCtrl', ['sessionService', '$scope', '$location', function (sessionService, $scope, $location) {
+app.controller('HeaderCtrl', ['sessionService', 'loginService', '$scope', '$location', function (sessionService, loginService, $scope, $location) {
 
     $scope.logOut = function(){
-        sessionService.deleteSession();
-        $location.path('/login');
+      var auth_id = sessionService.getSession();
+      var request = loginService.logout(auth_id);
+      request.then(
+        function (promise) { // Success callback
+          sessionService.deleteSession();
+          $location.path('/login');
+        },
+        function (error) { // Error callback
+          $scope.errorMessage = error.data.message;
+        });
     }
 }]);

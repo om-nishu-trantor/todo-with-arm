@@ -8,14 +8,19 @@
  * Controller of the todosApp
  */
 angular.module('todosApp')
-  .controller('DashboardCtrl',['$scope','dashboardService', '$modal', '$filter',function ($scope, dashboardService, $modal, $filter) {
+  .controller('DashboardCtrl',['$scope','dashboardService', '$modal', '$filter', '$location',function ($scope, dashboardService, $modal, $filter, $location) {
     dashboardService.getTodos().success(function(data){
       data.forEach(function(todo){
         todo.complete_till = new Date(todo.complete_till);
       });
       $scope.todos = data;
-    }).error(function(data){
-      alert(data.message);
+    }).error(function(data, status){
+      console.log('Error In dashboard controller !!!');
+      console.log('ERROR : ' + data.message);
+      if(status==401){
+        sessionService.deleteSession();
+        $location.path('/login');
+      }
     });
 
   $scope.customDoneFilter = function(item){
