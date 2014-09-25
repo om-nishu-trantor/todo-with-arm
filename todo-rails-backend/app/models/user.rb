@@ -6,10 +6,15 @@ class User < MongoidBase
 
 	validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, :uniqueness => true, :presence => true, :allow_blank => false
   validates :password, :presence => true, :allow_blank => false
+  validates :auth_token, :uniqueness => true
 
   def self.authenticate(*args)
     user = User.find_by(args.first)
-    user.update_attributes(auth_token: SecureRandom.hex(10)) unless user.auth_token
+    begin
+      user.update_attributes(auth_token: SecureRandom.hex(10)) unless user.auth_token
+    rescue
+      retry
+    end
     user
   end
 
